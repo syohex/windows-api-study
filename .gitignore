@@ -1,0 +1,36 @@
+.idea/
+.vs/
+.vscode/
+
+*~
+
+out/
+Debug/
+Release/
+
+*.obj
+*.exe
+*.pdb
+*.slo
+*.lo
+*.o
+*.so
+*.dylib
+*.dll
+
+# CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+CMakeUserPresets.json
+
+# Local setting
+*.DotSettings.user
