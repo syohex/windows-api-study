@@ -40,7 +40,9 @@ int main(int argc, char *argv[]) {
 
     wchar_t display_name[1024];
     DWORD display_size = 1024;
-    if (!GetServiceDisplayNameW(service_manager_handle, service_name.c_str(), display_name, &display_size)) {
+    const BOOL ret = GetServiceDisplayNameW(service_manager_handle, service_name.c_str(), display_name, &display_size);
+    ::CloseServiceHandle(service_manager_handle);
+    if (!ret) {
         std::cerr << "Failed to GetServiceDisplayNameW: LastError=" << ::GetLastError() << std::endl;
         return 1;
     }
